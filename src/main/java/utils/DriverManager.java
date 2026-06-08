@@ -15,7 +15,7 @@ import org.slf4j.LoggerFactory;
 public class DriverManager {
     private static final Logger log = LoggerFactory.getLogger(DriverManager.class);
     private static final DriverManager driverManager = new DriverManager();
-    private static String browser = System.getProperties().getProperty("browser");
+    public static String browser = System.getProperties().getProperty("browser");
 
     private static WebDriver webDriver;
 
