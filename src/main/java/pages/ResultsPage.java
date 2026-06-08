@@ -23,8 +23,7 @@ public class ResultsPage extends PageObject {
 
     public void verifyResults(String destination) {
         List<WebElement> list = DriverManager.getWebDriver().findElements(By.className("location"));
-        Assert.assertTrue(list.stream().anyMatch(obj ->
-                obj.getText().contains(destination)
-        ));
+         Assert.assertTrue("At least one result contains destination: " + destination, list.stream().anyMatch(obj -> obj.getText().contains(destination))); 
+
     }
 }
