@@ -60,6 +60,8 @@ jobs:
           echo y | sf plugins install file:///tmp/sf-guard-cli.tgz
 
       - name: Run AI SCA Review
+        env:
+          GUARD_API_KEY: ${{ secrets.GUARD_API_KEY }}
         run: |
           sf guard review \
             --check-tests \
