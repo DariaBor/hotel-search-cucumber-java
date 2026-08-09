@@ -3,7 +3,7 @@ package utils;
 import org.openqa.selenium.support.PageFactory;
 
 public abstract class PageObject {
-    public PageObject(){
+    private PageObject(){
         PageFactory.initElements(DriverManager.getWebDriver(), this);
     }
 }
