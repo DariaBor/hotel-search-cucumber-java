@@ -11,7 +11,7 @@ import java.util.List;
 
 public class WaitingMethods {
 
-    private static final int COMPONENT_TIMEOUT = 10;
+    protected static final int COMPONENT_TIMEOUT = 10;
 
     public static void waitUntilVisible(WebElement element){
         Wait<WebDriver> wait = new WebDriverWait(DriverManager.getWebDriver(), COMPONENT_TIMEOUT);
